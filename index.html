@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trains data Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="alert alert-secondary text-center" role="alert">
+            <h1><strong>Trains Data Management</strong></h1>
+            <h4>A Comprenhensive Train Directory</h4>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Current Trains.
+            </div>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="DisplayTable">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br><br>
+
+
+        <div class="card">
+            <div class="card-header">
+                Add Train
+            </div>
+            <div class="container">
+                <br>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Train name</span>
+                    </div>
+                    <input type="text" class="form-control" id="nameInput">
+                </div>
+
+                <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Destination</span>
+                        </div> 
+                        <input type="text" class="form-control" id="DestinationInput">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">First Train Time </span>
+                    </div>
+                    <input type="text" placeholder="HH:mm - military Time" class="form-control" aria-label="Amount (to the nearest dollar)" id="FirstInput">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Frequency</span>
+                    </div>
+                    <input type="text" placeholder="minutes" class="form-control" aria-label="Amount (to the nearest dollar)" id="frequencyInput">
+                </div>
+                  
+
+                <br><br>
+                <button id="AddButton" class="btn btn-active"> Add Train</button>
+                
+        <br><br>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="./JS/app.js"></script>
+
+</body>
+
+</html>
